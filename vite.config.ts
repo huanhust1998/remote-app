@@ -7,13 +7,13 @@ import { defineConfig } from "vite";
 export default defineConfig(({ }) => ({
   server: {
     host: "::",
-    port: 8081,
-    origin: 'http://localhost:8081',
+    port: 4201,
+    origin: 'http://localhost:4201',
   },
   preview: {
     host: "::",
-    port: 8081,
-    origin: "http://localhost:8081",
+    port: 4201,
+    origin: "http://localhost:4201",
   },
   plugins: [
     react(),
@@ -23,7 +23,7 @@ export default defineConfig(({ }) => ({
       remotes: {
         shell: {
           type: "module",
-          entry: "http://localhost:8080/mf-manifest.json",
+          entry: "http://localhost:4200/mf-manifest.json",
           name: "shell",
           entryGlobalName: "shell",
           shareScope: "default",
@@ -34,7 +34,7 @@ export default defineConfig(({ }) => ({
         "react-dom": { singleton: true },
         "react-router-dom": { singleton: true },
       },
-      getPublicPath: `() => "http://localhost:8081/"`
+      getPublicPath: `() => "http://localhost:4201/"`
     }),
   ].filter(Boolean),
   resolve: {

@@ -70,6 +70,14 @@
         
     }
       const usedRemotes = [
+                {
+                  entryGlobalName: "shell",
+                  name: "shell",
+                  type: "module",
+                  entry: "http://localhost:8080/mf-manifest.json",
+                  shareScope: "default",
+                }
+          
       ]
       export {
         usedShared,
